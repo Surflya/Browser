@@ -520,16 +520,16 @@
     <value>Segoe UI, 10.2pt</value>
   </data>
   <data name="tabControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 77</value>
+    <value>0, 52</value>
   </data>
   <data name="tabControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 2, 0, 0</value>
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="tabControl.Padding" type="System.Drawing.Point, System.Drawing">
-    <value>8, 3</value>
+    <value>0, 0</value>
   </data>
   <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1252, 776</value>
+    <value>1252, 801</value>
   </data>
   <data name="tabControl.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -569,6 +569,9 @@
   </data>
   <data name="toolStrip2.Text" xml:space="preserve">
     <value>toolStrip2</value>
+  </data>
+  <data name="toolStrip2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;toolStrip2.Name" xml:space="preserve">
     <value>toolStrip2</value>
@@ -658,7 +661,7 @@
     <value>Top</value>
   </data>
   <data name="panelFind.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 77</value>
+    <value>0, 52</value>
   </data>
   <data name="panelFind.Size" type="System.Drawing.Size, System.Drawing">
     <value>1252, 37</value>
@@ -834,6 +837,15 @@
   <metadata name="tabContextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>622, 17</value>
   </metadata>
+  <data name="tabContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 106</value>
+  </data>
+  <data name="&gt;&gt;tabContextMenuStrip.Name" xml:space="preserve">
+    <value>tabContextMenuStrip</value>
+  </data>
+  <data name="&gt;&gt;tabContextMenuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="duplicateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>188, 24</value>
   </data>
@@ -850,25 +862,16 @@
     <value>185, 6</value>
   </data>
   <data name="closeToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 24</value>
+    <value>188, 24</value>
   </data>
   <data name="closeToolStripMenuItem1.Text" xml:space="preserve">
     <value>Close</value>
   </data>
   <data name="closeOtherTabsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 24</value>
+    <value>188, 24</value>
   </data>
   <data name="closeOtherTabsToolStripMenuItem.Text" xml:space="preserve">
     <value>Close Other Tabs</value>
-  </data>
-  <data name="tabContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 134</value>
-  </data>
-  <data name="&gt;&gt;tabContextMenuStrip.Name" xml:space="preserve">
-    <value>tabContextMenuStrip</value>
-  </data>
-  <data name="&gt;&gt;tabContextMenuStrip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

@@ -131,23 +131,30 @@ namespace Surfly
             this.DesktopLocation = Settings.Default.LastLocation;
             this.Size = Settings.Default.LastSize;
             if (Settings.Default.LastTimeWasMaximized) this.WindowState = FormWindowState.Maximized;
+            
             // Carga "Al iniciar":
 
             NewTab(true);
 
-            // Carga los pines
-
-            int lines = File.ReadLines(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Surfly Browser\" + profileInternalName + @"\usr_data\pins\pins.Surflydata").Count();
-            StreamReader streamReader = new StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Surfly Browser\" + profileInternalName + @"\usr_data\pins\pins.Surflydata");
-            streamReader.ReadToEnd();
-            
-            for (int i = 0; i < lines/2; i++)
+            // Carga los pines:
+            List<string> listA = new List<string>();
+            List<string> listB = new List<string>();
+            using (var reader = new StreamReader(@"C:\test.csv"))
             {
-                Console.WriteLine("Item Added");
-                toolStrip2.Items.Add(streamReader.ReadLine());
+                
+                while (!reader.EndOfStream)
+                {
+                    var line = reader.ReadLine();
+                    var values = line.Split(';');
+
+                    listA.Add(values[0]);
+                    listB.Add(values[1]);
+                }
             }
-            streamReader.Close();
-            streamReader.Dispose();
+            for (int i = 0; i < listA.Count; i++)
+            {
+                toolStrip2.Items.Add(listB[i]);
+            }
         }
 
         private void webBrowser_TitleChanged(object sender, TitleChangedEventArgs e)
@@ -237,6 +244,8 @@ namespace Surfly
         {
             // Crea una pestaña con navegador incluido
             TabPage tab = new TabPage();
+            tab.Padding = new Padding(0, 0, 0, 0);
+            tab.Margin = new Padding(0, 0, 0, 0);
             tab.Text = "New Tab                              ";
             tabControl.Controls.Add(tab);
             tabControl.SelectTab(tabControl.TabCount - 1);
@@ -245,6 +254,9 @@ namespace Surfly
             // Establece los parámetros de las nuevas pestañas (navegador):
             webTab.Parent = tab;
             webTab.Dock = DockStyle.Fill;
+            Padding padding = new Padding(0);
+            webTab.Margin = padding;
+            webTab.Padding = padding;
             if (Settings.Default.SelectDownloadLocationInEveryDownload)
             {
                 webTab.DownloadHandler = new SelectedFolderDownloadsHandler();
