@@ -255,7 +255,8 @@ namespace Surfly
             }
 
             if (Settings.Default.BlockTracking) webTab.RequestHandler = new RequestsHandler();
-            webTab.DisplayHandler = new WFullScreenDisplayHandler(); 
+            webTab.DisplayHandler = new WFullScreenDisplayHandler();
+            webTab.MenuHandler = new MenuHandler();
 
             // Carga la página de "Nueva pestaña":
             if (isStart)
