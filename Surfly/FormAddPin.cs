@@ -35,16 +35,15 @@ namespace Surfly
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            StreamReader streamReader = new StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Surfly Browser\Default\usr_data\pins\pins.Surflydata");
+            StreamReader streamReader = new StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Surfly Browser\Default\usr_data\pins\pins.csv");
             string actualFavourites = streamReader.ReadToEnd();
             streamReader.Close();
             streamReader.Dispose();
             name = textBoxName.Text;
             page = textBoxAddress.Text;
-            StreamWriter streamWriter = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Surfly Browser\Default\usr_data\pins\pins.Surflydata");
+            StreamWriter streamWriter = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Surfly Browser\Default\usr_data\pins\pins.csv");
             streamWriter.Write(actualFavourites);
-            streamWriter.WriteLine(name);
-            streamWriter.WriteLine(page);
+            streamWriter.WriteLine(page + ";" + name);
             streamWriter.Close();
             streamWriter.Dispose();
             Close();
