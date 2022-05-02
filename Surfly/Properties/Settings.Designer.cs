@@ -154,5 +154,17 @@ namespace Surfly.Properties {
                 this["InternalProfileNameForDownloads"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://duckcuckgo.com/?q=")]
+        public string SearchUrl {
+            get {
+                return ((string)(this["SearchUrl"]));
+            }
+            set {
+                this["SearchUrl"] = value;
+            }
+        }
     }
 }

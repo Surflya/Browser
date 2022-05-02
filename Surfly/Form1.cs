@@ -139,9 +139,8 @@ namespace Surfly
             // Carga los pines:
             List<string> listA = new List<string>();
             List<string> listB = new List<string>();
-            using (var reader = new StreamReader(@"C:\test.csv"))
+            using (var reader = new StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Surfly Browser\Default\usr_data\pins\pins.csv"))
             {
-                
                 while (!reader.EndOfStream)
                 {
                     var line = reader.ReadLine();
@@ -240,7 +239,7 @@ namespace Surfly
             }
         }
 
-        public void NewTab(bool isStart)
+        public void NewTab(bool isStart, string urlfortab = "")
         {
             // Crea una pestaña con navegador incluido
             TabPage tab = new TabPage();
@@ -274,6 +273,10 @@ namespace Surfly
             if (isStart)
             {
                 webTab.LoadUrl(Settings.Default.AtStartPage);
+            }
+            else if (urlfortab != "")
+            {
+                webTab.LoadUrl(urlfortab);
             }
             else
             {
@@ -322,7 +325,15 @@ namespace Surfly
             toolStripAddressBar.Text = e.Address.ToString();
 
             // Añadir al historial
-            ChromiumWebBrowser web = tabControl.SelectedTab.Controls[0] as ChromiumWebBrowser;
+            ChromiumWebBrowser web;
+            try
+            {
+                web = tabControl.SelectedTab.Controls[0] as ChromiumWebBrowser;
+            }
+            catch (Exception)
+            {
+                web = Controls[0] as ChromiumWebBrowser;
+            }
             StreamReader streamReader = new StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Surfly Browser\" + profileInternalName + @"\usr_data\his\his.csv");
             var before = streamReader.ReadToEnd();
             streamReader.Dispose();
@@ -459,12 +470,19 @@ namespace Surfly
 
         private static void Connect(ref string res)
         {
-            HttpWebRequest webrequest = (HttpWebRequest)WebRequest.Create("http://www.bing.com/hpimagearchive.aspx?format=xml&idx=0&n=1&mbl=1&mkt=en-ww");
-            webrequest.KeepAlive = false;
-            webrequest.Method = "GET";
-            using (HttpWebResponse webresponse = (HttpWebResponse)webrequest.GetResponse())
-            using (StreamReader loResponseStream = new StreamReader(webresponse.GetResponseStream()))
-                res = loResponseStream.ReadToEnd();
+            try
+            {
+                HttpWebRequest webrequest = (HttpWebRequest)WebRequest.Create("http://www.bing.com/hpimagearchive.aspx?format=xml&idx=0&n=1&mbl=1&mkt=en-ww");
+                webrequest.KeepAlive = false;
+                webrequest.Method = "GET";
+                using (HttpWebResponse webresponse = (HttpWebResponse)webrequest.GetResponse())
+                using (StreamReader loResponseStream = new StreamReader(webresponse.GetResponseStream()))
+                    res = loResponseStream.ReadToEnd();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("It wasn't possible to download the daily image.");
+            }
         }
 
         private static void ProcessXml(ref string xmlString)
@@ -505,7 +523,7 @@ namespace Surfly
             }
             else
             {
-                ChromiumWebBrowser web = tabControl.SelectedTab.Controls[0] as ChromiumWebBrowser;
+                ChromiumWebBrowser web = Controls[0] as ChromiumWebBrowser;
                 FormBorderStyle = FormBorderStyle.Sizable;
                 if (previouslyMaximized)
                 {

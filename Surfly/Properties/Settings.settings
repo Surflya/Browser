@@ -35,5 +35,8 @@
     <Setting Name="InternalProfileNameForDownloads" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="SearchUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://duckcuckgo.com/?q=</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
