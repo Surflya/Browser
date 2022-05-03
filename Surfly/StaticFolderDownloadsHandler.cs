@@ -35,7 +35,7 @@ namespace Surfly
                 {
                     // Define the Downloads Directory Path
                     // You can use a different one, in this example we will hard-code it
-                    string DownloadsDirectoryPath = "C:\\Users\\" + "fyrub" + "\\Downloads\\";
+                    string DownloadsDirectoryPath = Settings.Default.DefaultDownloadLocation;
 
                     callback.Continue(
                         Path.Combine(

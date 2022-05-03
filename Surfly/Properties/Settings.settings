@@ -38,5 +38,8 @@
     <Setting Name="SearchUrl" Type="System.String" Scope="User">
       <Value Profile="(Default)">https://duckcuckgo.com/?q=</Value>
     </Setting>
+    <Setting Name="LastStart" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

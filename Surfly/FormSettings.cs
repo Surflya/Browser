@@ -37,5 +37,10 @@ namespace Surfly
         {
             comboBox1.Text = Settings.Default.DefaultSearchEngine;
         }
+
+        public void ResetBrowser(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

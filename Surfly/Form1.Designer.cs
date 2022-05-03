@@ -66,7 +66,7 @@
             this.toolStripAddressBar = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButtonGo = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonNewTab = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonCloseTab = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonNewsfeed = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonAddToPins = new System.Windows.Forms.ToolStripButton();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -85,9 +85,18 @@
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.closeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.closeOtherTabsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panelContentFeed = new System.Windows.Forms.Panel();
+            this.listViewFeed = new System.Windows.Forms.ListView();
+            this.closeSuggestion = new System.Windows.Forms.PictureBox();
+            this.panelSuggestion = new System.Windows.Forms.Panel();
+            this.buttonSuggestion = new System.Windows.Forms.Button();
+            this.labelSuggestion = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.panelFind.SuspendLayout();
             this.tabContextMenuStrip.SuspendLayout();
+            this.panelContentFeed.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.closeSuggestion)).BeginInit();
+            this.panelSuggestion.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -105,7 +114,7 @@
             this.toolStripAddressBar,
             this.toolStripButtonGo,
             this.toolStripButtonNewTab,
-            this.toolStripButtonCloseTab,
+            this.toolStripButtonNewsfeed,
             this.toolStripButtonAddToPins});
             this.toolStrip1.Name = "toolStrip1";
             // 
@@ -305,6 +314,7 @@
             this.toolStripButtonBack.Image = global::Surfly.Properties.Resources.arrow_back_black_24dp;
             this.toolStripButtonBack.Name = "toolStripButtonBack";
             this.toolStripButtonBack.Click += new System.EventHandler(this.toolStripButtonBack_Click);
+            this.toolStripButtonBack.Paint += new System.Windows.Forms.PaintEventHandler(this.PaintControlRounded);
             // 
             // toolStripButtonForward
             // 
@@ -313,6 +323,7 @@
             this.toolStripButtonForward.Image = global::Surfly.Properties.Resources.arrow_forward_black_24dp;
             this.toolStripButtonForward.Name = "toolStripButtonForward";
             this.toolStripButtonForward.Click += new System.EventHandler(this.toolStripButtonForward_Click);
+            this.toolStripButtonForward.Paint += new System.Windows.Forms.PaintEventHandler(this.PaintControlRounded);
             // 
             // toolStripButtonReload
             // 
@@ -340,6 +351,7 @@
             resources.ApplyResources(this.toolStripAddressBar, "toolStripAddressBar");
             this.toolStripAddressBar.Name = "toolStripAddressBar";
             this.toolStripAddressBar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.toolStripAddressBar_KeyPress);
+            this.toolStripAddressBar.Paint += new System.Windows.Forms.PaintEventHandler(this.PaintControlRounded);
             // 
             // toolStripButtonGo
             // 
@@ -358,14 +370,15 @@
             this.toolStripButtonNewTab.Name = "toolStripButtonNewTab";
             this.toolStripButtonNewTab.Click += new System.EventHandler(this.toolStripButtonNewTab_Click);
             // 
-            // toolStripButtonCloseTab
+            // toolStripButtonNewsfeed
             // 
-            this.toolStripButtonCloseTab.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            resources.ApplyResources(this.toolStripButtonCloseTab, "toolStripButtonCloseTab");
-            this.toolStripButtonCloseTab.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonCloseTab.Image = global::Surfly.Properties.Resources.close_black_24dp;
-            this.toolStripButtonCloseTab.Name = "toolStripButtonCloseTab";
-            this.toolStripButtonCloseTab.Click += new System.EventHandler(this.toolStripButtonCloseTab_Click);
+            this.toolStripButtonNewsfeed.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            resources.ApplyResources(this.toolStripButtonNewsfeed, "toolStripButtonNewsfeed");
+            this.toolStripButtonNewsfeed.CheckOnClick = true;
+            this.toolStripButtonNewsfeed.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonNewsfeed.Image = global::Surfly.Properties.Resources.help_center_black_24dp;
+            this.toolStripButtonNewsfeed.Name = "toolStripButtonNewsfeed";
+            this.toolStripButtonNewsfeed.Click += new System.EventHandler(this.toolStripButtonNewsfeed_Click);
             // 
             // toolStripButtonAddToPins
             // 
@@ -495,14 +508,60 @@
             resources.ApplyResources(this.closeOtherTabsToolStripMenuItem, "closeOtherTabsToolStripMenuItem");
             this.closeOtherTabsToolStripMenuItem.Click += new System.EventHandler(this.closeOtherTabsToolStripMenuItem_Click);
             // 
+            // panelContentFeed
+            // 
+            this.panelContentFeed.Controls.Add(this.listViewFeed);
+            resources.ApplyResources(this.panelContentFeed, "panelContentFeed");
+            this.panelContentFeed.Name = "panelContentFeed";
+            // 
+            // listViewFeed
+            // 
+            this.listViewFeed.GridLines = true;
+            this.listViewFeed.HideSelection = false;
+            resources.ApplyResources(this.listViewFeed, "listViewFeed");
+            this.listViewFeed.Name = "listViewFeed";
+            this.listViewFeed.UseCompatibleStateImageBehavior = false;
+            this.listViewFeed.View = System.Windows.Forms.View.List;
+            this.listViewFeed.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listViewFeed_ItemSelectionChanged);
+            // 
+            // closeSuggestion
+            // 
+            this.closeSuggestion.Image = global::Surfly.Properties.Resources.close_black_24dp;
+            this.closeSuggestion.InitialImage = global::Surfly.Properties.Resources.close_black_24dp;
+            resources.ApplyResources(this.closeSuggestion, "closeSuggestion");
+            this.closeSuggestion.Name = "closeSuggestion";
+            this.closeSuggestion.TabStop = false;
+            this.closeSuggestion.Click += new System.EventHandler(this.closeSuggestion_Click);
+            // 
+            // panelSuggestion
+            // 
+            this.panelSuggestion.Controls.Add(this.buttonSuggestion);
+            this.panelSuggestion.Controls.Add(this.labelSuggestion);
+            this.panelSuggestion.Controls.Add(this.closeSuggestion);
+            resources.ApplyResources(this.panelSuggestion, "panelSuggestion");
+            this.panelSuggestion.Name = "panelSuggestion";
+            // 
+            // buttonSuggestion
+            // 
+            resources.ApplyResources(this.buttonSuggestion, "buttonSuggestion");
+            this.buttonSuggestion.Name = "buttonSuggestion";
+            this.buttonSuggestion.UseVisualStyleBackColor = true;
+            // 
+            // labelSuggestion
+            // 
+            resources.ApplyResources(this.labelSuggestion, "labelSuggestion");
+            this.labelSuggestion.Name = "labelSuggestion";
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panelFind);
             this.Controls.Add(this.tabControl);
-            this.Controls.Add(this.toolStrip2);
+            this.Controls.Add(this.panelSuggestion);
+            this.Controls.Add(this.panelContentFeed);
+            this.Controls.Add(this.panelFind);
             this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.toolStrip2);
             this.Name = "Form1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -513,6 +572,10 @@
             this.panelFind.ResumeLayout(false);
             this.panelFind.PerformLayout();
             this.tabContextMenuStrip.ResumeLayout(false);
+            this.panelContentFeed.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.closeSuggestion)).EndInit();
+            this.panelSuggestion.ResumeLayout(false);
+            this.panelSuggestion.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -547,7 +610,6 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripButton toolStripButtonCloseTab;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
         private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
@@ -575,6 +637,13 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem closeOtherTabsToolStripMenuItem;
+        private System.Windows.Forms.Panel panelContentFeed;
+        private System.Windows.Forms.ListView listViewFeed;
+        private System.Windows.Forms.PictureBox closeSuggestion;
+        private System.Windows.Forms.ToolStripButton toolStripButtonNewsfeed;
+        private System.Windows.Forms.Panel panelSuggestion;
+        private System.Windows.Forms.Button buttonSuggestion;
+        private System.Windows.Forms.Label labelSuggestion;
     }
 }
 

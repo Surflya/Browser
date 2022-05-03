@@ -166,5 +166,16 @@ namespace Surfly.Properties {
                 this["SearchUrl"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.DateTime LastStart {
+            get {
+                return ((global::System.DateTime)(this["LastStart"]));
+            }
+            set {
+                this["LastStart"] = value;
+            }
+        }
     }
 }

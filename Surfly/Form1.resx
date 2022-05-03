@@ -127,11 +127,203 @@
   <data name="toolStripDropDownButton1.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="newTabToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="newTabToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+T</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="newTabToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>342, 30</value>
+  </data>
+  <data name="newTabToolStripMenuItem.Text" xml:space="preserve">
+    <value>New Tab</value>
+  </data>
+  <data name="newWindowToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="newWindowToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+N</value>
+  </data>
+  <data name="newWindowToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>342, 30</value>
+  </data>
+  <data name="newWindowToolStripMenuItem.Text" xml:space="preserve">
+    <value>New Window</value>
+  </data>
+  <data name="newPrivateWindowToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="newPrivateWindowToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Mayús.+N</value>
+  </data>
+  <data name="newPrivateWindowToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>342, 30</value>
+  </data>
+  <data name="newPrivateWindowToolStripMenuItem.Text" xml:space="preserve">
+    <value>New Private Window</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 6</value>
+  </data>
+  <data name="pinsToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="pinsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>342, 30</value>
+  </data>
+  <data name="pinsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Pins</value>
+  </data>
+  <data name="historyToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="historyToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+H</value>
+  </data>
+  <data name="historyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>342, 30</value>
+  </data>
+  <data name="historyToolStripMenuItem.Text" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="downloadsToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="downloadsToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+J</value>
+  </data>
+  <data name="downloadsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>342, 30</value>
+  </data>
+  <data name="downloadsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Downloads</value>
+  </data>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 6</value>
+  </data>
+  <data name="zoomToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>342, 30</value>
+  </data>
+  <data name="zoomToolStripMenuItem.Text" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
+  <data name="toolStripComboBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 28</value>
+  </data>
+  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 6</value>
+  </data>
+  <data name="fullscreenToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="fullscreenToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>F11</value>
+  </data>
+  <data name="fullscreenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>342, 30</value>
+  </data>
+  <data name="fullscreenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Fullscreen</value>
+  </data>
+  <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 6</value>
+  </data>
+  <data name="printToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="printToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 30</value>
+  </data>
+  <data name="printToolStripMenuItem.Text" xml:space="preserve">
+    <value>Print...</value>
+  </data>
+  <data name="searchOnPageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 30</value>
+  </data>
+  <data name="searchOnPageToolStripMenuItem.Text" xml:space="preserve">
+    <value>Search On Page</value>
+  </data>
+  <data name="savePageAsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 30</value>
+  </data>
+  <data name="savePageAsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Save Page As...</value>
+  </data>
+  <data name="shareToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 30</value>
+  </data>
+  <data name="shareToolStripMenuItem.Text" xml:space="preserve">
+    <value>Share</value>
+  </data>
+  <data name="toolStripSeparator6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 6</value>
+  </data>
+  <data name="taskManagerToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 30</value>
+  </data>
+  <data name="taskManagerToolStripMenuItem.Text" xml:space="preserve">
+    <value>Task Manager</value>
+  </data>
+  <data name="developerToolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 30</value>
+  </data>
+  <data name="developerToolsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Developer Tools</value>
+  </data>
+  <data name="moreToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>342, 30</value>
+  </data>
+  <data name="moreToolStripMenuItem.Text" xml:space="preserve">
+    <value>More...</value>
+  </data>
+  <data name="settingsToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>342, 30</value>
+  </data>
+  <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="helpToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="helpToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>F1</value>
+  </data>
+  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>342, 30</value>
+  </data>
+  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 6</value>
+  </data>
+  <data name="selectProfileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>342, 30</value>
+  </data>
+  <data name="selectProfileToolStripMenuItem.Text" xml:space="preserve">
+    <value>Select Profile</value>
+  </data>
+  <data name="closeToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="closeToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Alt+F4</value>
+  </data>
+  <data name="closeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>342, 30</value>
+  </data>
+  <data name="closeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="toolStripDropDownButton1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="toolStripDropDownButton1.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -267,23 +459,20 @@
   <data name="toolStripButtonNewTab.ToolTipText" xml:space="preserve">
     <value>New Tab</value>
   </data>
-  <data name="toolStripButtonCloseTab.AutoSize" type="System.Boolean, mscorlib">
+  <data name="toolStripButtonNewsfeed.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="toolStripButtonCloseTab.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+  <data name="toolStripButtonNewsfeed.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="toolStripButtonCloseTab.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="toolStripButtonNewsfeed.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="toolStripButtonCloseTab.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="toolStripButtonNewsfeed.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 40</value>
   </data>
-  <data name="toolStripButtonCloseTab.Text" xml:space="preserve">
+  <data name="toolStripButtonNewsfeed.Text" xml:space="preserve">
     <value>toolStripButton1</value>
-  </data>
-  <data name="toolStripButtonCloseTab.ToolTipText" xml:space="preserve">
-    <value>Close Tab</value>
   </data>
   <data name="toolStripButtonAddToPins.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -319,199 +508,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;toolStrip1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="newTabToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="newTabToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+T</value>
-  </data>
-  <data name="newTabToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>342, 30</value>
-  </data>
-  <data name="newTabToolStripMenuItem.Text" xml:space="preserve">
-    <value>New Tab</value>
-  </data>
-  <data name="newWindowToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="newWindowToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+N</value>
-  </data>
-  <data name="newWindowToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>342, 30</value>
-  </data>
-  <data name="newWindowToolStripMenuItem.Text" xml:space="preserve">
-    <value>New Window</value>
-  </data>
-  <data name="newPrivateWindowToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="newPrivateWindowToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+Mayús.+N</value>
-  </data>
-  <data name="newPrivateWindowToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>342, 30</value>
-  </data>
-  <data name="newPrivateWindowToolStripMenuItem.Text" xml:space="preserve">
-    <value>New Private Window</value>
-  </data>
-  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>339, 6</value>
-  </data>
-  <data name="pinsToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="pinsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>342, 30</value>
-  </data>
-  <data name="pinsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Pins</value>
-  </data>
-  <data name="historyToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="historyToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+H</value>
-  </data>
-  <data name="historyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>342, 30</value>
-  </data>
-  <data name="historyToolStripMenuItem.Text" xml:space="preserve">
-    <value>History</value>
-  </data>
-  <data name="downloadsToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="downloadsToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+J</value>
-  </data>
-  <data name="downloadsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>342, 30</value>
-  </data>
-  <data name="downloadsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Downloads</value>
-  </data>
-  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>339, 6</value>
-  </data>
-  <data name="zoomToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>342, 30</value>
-  </data>
-  <data name="zoomToolStripMenuItem.Text" xml:space="preserve">
-    <value>Zoom</value>
-  </data>
-  <data name="toolStripComboBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 28</value>
-  </data>
-  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>339, 6</value>
-  </data>
-  <data name="fullscreenToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="fullscreenToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>F11</value>
-  </data>
-  <data name="fullscreenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>342, 30</value>
-  </data>
-  <data name="fullscreenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Fullscreen</value>
-  </data>
-  <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>339, 6</value>
-  </data>
-  <data name="moreToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>342, 30</value>
-  </data>
-  <data name="moreToolStripMenuItem.Text" xml:space="preserve">
-    <value>More...</value>
-  </data>
-  <data name="printToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="printToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 30</value>
-  </data>
-  <data name="printToolStripMenuItem.Text" xml:space="preserve">
-    <value>Print...</value>
-  </data>
-  <data name="searchOnPageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 30</value>
-  </data>
-  <data name="searchOnPageToolStripMenuItem.Text" xml:space="preserve">
-    <value>Search On Page</value>
-  </data>
-  <data name="savePageAsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 30</value>
-  </data>
-  <data name="savePageAsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Save Page As...</value>
-  </data>
-  <data name="shareToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 30</value>
-  </data>
-  <data name="shareToolStripMenuItem.Text" xml:space="preserve">
-    <value>Share</value>
-  </data>
-  <data name="toolStripSeparator6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 6</value>
-  </data>
-  <data name="taskManagerToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 30</value>
-  </data>
-  <data name="taskManagerToolStripMenuItem.Text" xml:space="preserve">
-    <value>Task Manager</value>
-  </data>
-  <data name="developerToolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 30</value>
-  </data>
-  <data name="developerToolsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Developer Tools</value>
-  </data>
-  <data name="settingsToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>342, 30</value>
-  </data>
-  <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Settings</value>
-  </data>
-  <data name="helpToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="helpToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>F1</value>
-  </data>
-  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>342, 30</value>
-  </data>
-  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
-    <value>Help</value>
-  </data>
-  <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>339, 6</value>
-  </data>
-  <data name="selectProfileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>342, 30</value>
-  </data>
-  <data name="selectProfileToolStripMenuItem.Text" xml:space="preserve">
-    <value>Select Profile</value>
-  </data>
-  <data name="closeToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="closeToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Alt+F4</value>
-  </data>
-  <data name="closeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>342, 30</value>
-  </data>
-  <data name="closeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Close</value>
+    <value>5</value>
   </data>
   <data name="tabControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -520,7 +517,7 @@
     <value>Segoe UI, 10.2pt</value>
   </data>
   <data name="tabControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 52</value>
+    <value>0, 139</value>
   </data>
   <data name="tabControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -529,7 +526,7 @@
     <value>0, 0</value>
   </data>
   <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1252, 801</value>
+    <value>864, 714</value>
   </data>
   <data name="tabControl.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -544,7 +541,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tabControl.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
   </data>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>269, 17</value>
@@ -583,106 +580,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;toolStrip2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;buttonForward.Name" xml:space="preserve">
-    <value>buttonForward</value>
-  </data>
-  <data name="&gt;&gt;buttonForward.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonForward.Parent" xml:space="preserve">
-    <value>panelFind</value>
-  </data>
-  <data name="&gt;&gt;buttonForward.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;buttonNext.Name" xml:space="preserve">
-    <value>buttonNext</value>
-  </data>
-  <data name="&gt;&gt;buttonNext.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonNext.Parent" xml:space="preserve">
-    <value>panelFind</value>
-  </data>
-  <data name="&gt;&gt;buttonNext.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;labelSearchOnPage.Name" xml:space="preserve">
-    <value>labelSearchOnPage</value>
-  </data>
-  <data name="&gt;&gt;labelSearchOnPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelSearchOnPage.Parent" xml:space="preserve">
-    <value>panelFind</value>
-  </data>
-  <data name="&gt;&gt;labelSearchOnPage.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;labelSearchOnPageResults.Name" xml:space="preserve">
-    <value>labelSearchOnPageResults</value>
-  </data>
-  <data name="&gt;&gt;labelSearchOnPageResults.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelSearchOnPageResults.Parent" xml:space="preserve">
-    <value>panelFind</value>
-  </data>
-  <data name="&gt;&gt;labelSearchOnPageResults.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;buttonCloseSearchOnPage.Name" xml:space="preserve">
-    <value>buttonCloseSearchOnPage</value>
-  </data>
-  <data name="&gt;&gt;buttonCloseSearchOnPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonCloseSearchOnPage.Parent" xml:space="preserve">
-    <value>panelFind</value>
-  </data>
-  <data name="&gt;&gt;buttonCloseSearchOnPage.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;textBoxSearchOnPage.Name" xml:space="preserve">
-    <value>textBoxSearchOnPage</value>
-  </data>
-  <data name="&gt;&gt;textBoxSearchOnPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxSearchOnPage.Parent" xml:space="preserve">
-    <value>panelFind</value>
-  </data>
-  <data name="&gt;&gt;textBoxSearchOnPage.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="panelFind.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="panelFind.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 52</value>
-  </data>
-  <data name="panelFind.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1252, 37</value>
-  </data>
-  <data name="panelFind.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="panelFind.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;panelFind.Name" xml:space="preserve">
-    <value>panelFind</value>
-  </data>
-  <data name="&gt;&gt;panelFind.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelFind.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelFind.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>6</value>
   </data>
   <data name="buttonForward.Location" type="System.Drawing.Point, System.Drawing">
     <value>703, 8</value>
@@ -834,18 +732,36 @@
   <data name="&gt;&gt;textBoxSearchOnPage.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="panelFind.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panelFind.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 52</value>
+  </data>
+  <data name="panelFind.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1252, 37</value>
+  </data>
+  <data name="panelFind.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="panelFind.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;panelFind.Name" xml:space="preserve">
+    <value>panelFind</value>
+  </data>
+  <data name="&gt;&gt;panelFind.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelFind.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelFind.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <metadata name="tabContextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>622, 17</value>
   </metadata>
-  <data name="tabContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 106</value>
-  </data>
-  <data name="&gt;&gt;tabContextMenuStrip.Name" xml:space="preserve">
-    <value>tabContextMenuStrip</value>
-  </data>
-  <data name="&gt;&gt;tabContextMenuStrip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="duplicateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>188, 24</value>
   </data>
@@ -872,6 +788,165 @@
   </data>
   <data name="closeOtherTabsToolStripMenuItem.Text" xml:space="preserve">
     <value>Close Other Tabs</value>
+  </data>
+  <data name="tabContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 106</value>
+  </data>
+  <data name="&gt;&gt;tabContextMenuStrip.Name" xml:space="preserve">
+    <value>tabContextMenuStrip</value>
+  </data>
+  <data name="&gt;&gt;tabContextMenuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="listViewFeed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 36</value>
+  </data>
+  <data name="listViewFeed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>364, 520</value>
+  </data>
+  <data name="listViewFeed.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;listViewFeed.Name" xml:space="preserve">
+    <value>listViewFeed</value>
+  </data>
+  <data name="&gt;&gt;listViewFeed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listViewFeed.Parent" xml:space="preserve">
+    <value>panelContentFeed</value>
+  </data>
+  <data name="&gt;&gt;listViewFeed.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panelContentFeed.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="panelContentFeed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>864, 89</value>
+  </data>
+  <data name="panelContentFeed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>388, 764</value>
+  </data>
+  <data name="panelContentFeed.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="panelContentFeed.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;panelContentFeed.Name" xml:space="preserve">
+    <value>panelContentFeed</value>
+  </data>
+  <data name="&gt;&gt;panelContentFeed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelContentFeed.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelContentFeed.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="closeSuggestion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 7</value>
+  </data>
+  <data name="closeSuggestion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="closeSuggestion.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;closeSuggestion.Name" xml:space="preserve">
+    <value>closeSuggestion</value>
+  </data>
+  <data name="&gt;&gt;closeSuggestion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;closeSuggestion.Parent" xml:space="preserve">
+    <value>panelSuggestion</value>
+  </data>
+  <data name="&gt;&gt;closeSuggestion.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="buttonSuggestion.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonSuggestion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 24</value>
+  </data>
+  <data name="buttonSuggestion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 23</value>
+  </data>
+  <data name="buttonSuggestion.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="buttonSuggestion.Text" xml:space="preserve">
+    <value>Change To DuckDuckGo</value>
+  </data>
+  <data name="&gt;&gt;buttonSuggestion.Name" xml:space="preserve">
+    <value>buttonSuggestion</value>
+  </data>
+  <data name="&gt;&gt;buttonSuggestion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonSuggestion.Parent" xml:space="preserve">
+    <value>panelSuggestion</value>
+  </data>
+  <data name="&gt;&gt;buttonSuggestion.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelSuggestion.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelSuggestion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 7</value>
+  </data>
+  <data name="labelSuggestion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>796, 16</value>
+  </data>
+  <data name="labelSuggestion.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="labelSuggestion.Text" xml:space="preserve">
+    <value>Are you really sure do you want to continue using Google as default search engine? Change to DuckDuckGo to better privacy policies.</value>
+  </data>
+  <data name="&gt;&gt;labelSuggestion.Name" xml:space="preserve">
+    <value>labelSuggestion</value>
+  </data>
+  <data name="&gt;&gt;labelSuggestion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelSuggestion.Parent" xml:space="preserve">
+    <value>panelSuggestion</value>
+  </data>
+  <data name="&gt;&gt;labelSuggestion.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panelSuggestion.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panelSuggestion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 89</value>
+  </data>
+  <data name="panelSuggestion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>864, 50</value>
+  </data>
+  <data name="panelSuggestion.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="panelSuggestion.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;panelSuggestion.Name" xml:space="preserve">
+    <value>panelSuggestion</value>
+  </data>
+  <data name="&gt;&gt;panelSuggestion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelSuggestion.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelSuggestion.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1569,10 +1644,10 @@
   <data name="&gt;&gt;toolStripButtonNewTab.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripButtonCloseTab.Name" xml:space="preserve">
-    <value>toolStripButtonCloseTab</value>
+  <data name="&gt;&gt;toolStripButtonNewsfeed.Name" xml:space="preserve">
+    <value>toolStripButtonNewsfeed</value>
   </data>
-  <data name="&gt;&gt;toolStripButtonCloseTab.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolStripButtonNewsfeed.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripButtonAddToPins.Name" xml:space="preserve">

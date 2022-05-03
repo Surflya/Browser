@@ -23,6 +23,9 @@ using System.Windows.Data;
 using CefSharp.Handler;
 using CefSharp.WinForms.Handler;
 using Microsoft.Win32;
+using System.Xml;
+using System.ServiceModel.Syndication;
+using System.Reflection;
 
 namespace Surfly
 {
@@ -35,13 +38,29 @@ namespace Surfly
         public string profileInternalName;
         TabPage tabContextMenuStripTab;
         int tabContextMenuStripTabIndex;
-
+        public string[] trackers_blocklist;
+        string[] feedLinks = {""};
 
         public Form1(bool callIsFromOnFullscreenModeChange)
         {
             InitializeComponent();
 
             string[] args = Environment.GetCommandLineArgs();
+
+            // Trackers Blocklist Maker
+
+            try
+            {
+                StreamReader streamReader = new StreamReader(Environment.CurrentDirectory + @"\Resources\trackers_blocklist.txt");
+                for (int i = 0; i < streamReader.ReadToEnd().Length; i++)
+                {
+                    trackers_blocklist[i] = streamReader.ReadLine();
+                }
+            }
+            catch (Exception)
+            {
+                
+            }
 
             // Descarga la imagen de Bing del día
 
@@ -128,6 +147,9 @@ namespace Surfly
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Registra el inicio de la sesión
+            Settings.Default.LastStart = DateTime.Now;
+
             this.DesktopLocation = Settings.Default.LastLocation;
             this.Size = Settings.Default.LastSize;
             if (Settings.Default.LastTimeWasMaximized) this.WindowState = FormWindowState.Maximized;
@@ -154,6 +176,71 @@ namespace Surfly
             {
                 toolStrip2.Items.Add(listB[i]);
             }
+
+            // Carga el feed
+
+            var feedReader = XmlReader.Create("http://feeds.weblogssl.com/genbeta");
+            var feed = SyndicationFeed.Load(feedReader);
+            int i1 = 0;
+            foreach (var item in feed.Items)
+            {
+                listViewFeed.Items.Add("<b>" + item.Authors + "</b>" + Environment.NewLine + item.Title.Text);
+            }
+
+            // Carga el mensaje de recomendación
+            if (DateTime.Compare(Settings.Default.LastStart, DateTime.Now.AddYears(-1)) < 0)
+            {
+                FormSettings formSettings = new FormSettings();
+                labelSuggestion.Text = "Has been long from the last time. Do you want to start fresh?";
+                buttonSuggestion.Text = "Let's made it!";
+                buttonSuggestion.Click += formSettings.ResetBrowser;
+                panelSuggestion.Show();
+            }
+            if (Settings.Default.DefaultSearchEngine == "Google")
+            {
+                buttonSuggestion.Click += ChangeSearchEngineToDDG; ;
+                panelSuggestion.Show();
+            }
+
+            // Registra el inicio de la sesión
+            Settings.Default.LastStart = DateTime.Now;
+            Settings.Default.Save();
+        }
+
+        private void ChangeSearchEngineToDDG(object sender, EventArgs e)
+        {
+            Settings.Default.DefaultSearchEngine = "DuckDuckGo (default)";
+            Settings.Default.SearchUrl = "https://duckduckgo.com/?q=";
+            var button = sender as Button;
+            button.Parent.Hide();
+        }
+
+        private void MakeDefaultBrowser(object sender, EventArgs e)
+        {
+            Console.WriteLine("Making Default Browser");
+            {
+                var imgKey = Registry.ClassesRoot.OpenSubKey("http");
+                var imgType = imgKey.GetValue("");
+                String myExecutable = Assembly.GetEntryAssembly().Location;
+                String command = "\"" + myExecutable + "\"" + " \"%1\"";
+                String keyName = imgType + @"\shell\Open\command";
+                using (var key = Registry.ClassesRoot.CreateSubKey(keyName))
+                {
+                    key.SetValue("", command);
+                } 
+            }
+            {
+                var imgKey = Registry.ClassesRoot.OpenSubKey("https");
+                var imgType = imgKey.GetValue("");
+                String myExecutable = Assembly.GetEntryAssembly().Location;
+                String command = "\"" + myExecutable + "\"" + " \"%1\"";
+                String keyName = imgType + @"\shell\Open\command";
+                using (var key = Registry.ClassesRoot.CreateSubKey(keyName))
+                {
+                    key.SetValue("", command);
+                }
+            }
+            Console.WriteLine("Maked Default Browser");
         }
 
         private void webBrowser_TitleChanged(object sender, TitleChangedEventArgs e)
@@ -620,7 +707,7 @@ namespace Surfly
                 TextRenderer.DrawText(e.Graphics, tabPage.Text, tabPage.Font,
                     tabRect, tabPage.ForeColor, TextFormatFlags.Left);
             }
-            catch (Exception ex) { throw new Exception(ex.Message); }
+            catch (Exception ex) { throw; }
         }
 
         [DllImport("user32.dll")]
@@ -648,6 +735,10 @@ namespace Surfly
                 if (imageRect.Contains(e.Location))
                 {
                     this.tabControl.TabPages.RemoveAt(i);
+                    if (tabControl.TabCount == 0)
+                    {
+                        Application.Exit();
+                    }
                     break;
                 }
             }
@@ -684,6 +775,43 @@ namespace Surfly
                     nextForsAre1 = 1;
                 }
             }
+        }
+
+        private void listViewFeed_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+            NewTab(false, feedLinks[e.ItemIndex]);
+        }
+
+        private static void PaintTransparentBackground(Control c, PaintEventArgs e)
+        {
+            if (c.Parent == null || !Application.RenderWithVisualStyles)
+                return;
+
+            ButtonRenderer.DrawParentBackground(e.Graphics, c.ClientRectangle, c);
+        }
+
+        private void PaintControlRounded(object sender, PaintEventArgs e)
+        {
+            PaintTransparentBackground(this, e);
+            // TODO: Paint your actual content here with rounded corners
+        }
+
+        private void toolStripButtonNewsfeed_Click(object sender, EventArgs e)
+        {
+            if (!panelContentFeed.Visible) 
+            { 
+                panelContentFeed.Show();
+            }
+            else
+            {
+                panelContentFeed.Hide();
+            }
+            
+        }
+
+        private void closeSuggestion_Click(object sender, EventArgs e)
+        {
+            panelSuggestion.Hide();
         }
     }
 }
