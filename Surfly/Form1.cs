@@ -376,7 +376,8 @@ namespace Surfly
             webTab.TitleChanged += webBrowser_TitleChanged;
             webTab.AddressChanged += webBrowser_AddressChanged;
             webTab.StatusMessage += webBrowser_StatusMessage;
-            webTab.KeyDown += Form1_KeyDown;        }
+            webTab.KeyDown += Form1_KeyDown;
+        }
 
         private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
         {

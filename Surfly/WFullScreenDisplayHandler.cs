@@ -11,7 +11,7 @@ namespace Surfly
 {
     public class WFullScreenDisplayHandler : IDisplayHandler
     {
-        
+        private Control parent;
 
 
         void IDisplayHandler.OnAddressChanged(IWebBrowser browserControl, AddressChangedEventArgs addressChangedArgs)
@@ -23,11 +23,25 @@ namespace Surfly
         void IDisplayHandler.OnFaviconUrlChange(IWebBrowser browserControl, IBrowser browser, IList<string> urls)
         {
         }
-        async void IDisplayHandler.OnFullscreenModeChange(IWebBrowser browserControl, IBrowser browser, bool fullscreen)
+        void IDisplayHandler.OnFullscreenModeChange(IWebBrowser browserControl, IBrowser browser, bool fullscreen)
         {
-            
+            var chromiumWebBrowser = (ChromiumWebBrowser)browserControl;
+                if (fullscreen)
+                {
+                    parent = chromiumWebBrowser.Parent;
+                    chromiumWebBrowser.FindForm().FormBorderStyle = FormBorderStyle.None;
+                    chromiumWebBrowser.FindForm().WindowState = FormWindowState.Maximized;
+                    chromiumWebBrowser.Parent = chromiumWebBrowser.FindForm();
+                    
+                    chromiumWebBrowser.BringToFront();
+                }
+                else
+                {
+                    chromiumWebBrowser.FindForm().FormBorderStyle = FormBorderStyle.Sizable;
+                    chromiumWebBrowser.FindForm().WindowState = FormWindowState.Normal;
+                    chromiumWebBrowser.Parent = parent;
+                }
         }
-
         void IDisplayHandler.OnStatusMessage(IWebBrowser browserControl, StatusMessageEventArgs statusMessageArgs)
         {
         }
@@ -36,21 +50,22 @@ namespace Surfly
             return false;
         }
 
-        public bool OnAutoResize(IWebBrowser chromiumWebBrowser, IBrowser browser, Size newSize)
+        bool IDisplayHandler.OnAutoResize(IWebBrowser chromiumWebBrowser, IBrowser browser, Size newSize)
         {
             return false;
         }
 
-        public bool OnCursorChange(IWebBrowser chromiumWebBrowser, IBrowser browser, IntPtr cursor, CursorType type, CursorInfo customCursorInfo)
+        bool IDisplayHandler.OnCursorChange(IWebBrowser chromiumWebBrowser, IBrowser browser, IntPtr cursor, CursorType type, CursorInfo customCursorInfo)
         {
             return false;
         }
 
-        public void OnLoadingProgressChange(IWebBrowser chromiumWebBrowser, IBrowser browser, double progress)
+        void IDisplayHandler.OnLoadingProgressChange(IWebBrowser chromiumWebBrowser, IBrowser browser, double progress)
         {
+
         }
 
-        public bool OnTooltipChanged(IWebBrowser chromiumWebBrowser, ref string text)
+        bool IDisplayHandler.OnTooltipChanged(IWebBrowser chromiumWebBrowser, ref string text)
         {
             return false;
         }
