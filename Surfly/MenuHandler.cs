@@ -1,17 +1,13 @@
-﻿using System;
-using CefSharp;
-using System.Windows.Forms;
-using System.Speech.Synthesis;
-using System.Drawing.Printing;
-using System.Net;
-using System.Web;
-using System.Drawing;
-using NTextCat;
-using System.Text.RegularExpressions;
-using System.Globalization;
+﻿using CefSharp;
 using Surfly;
-using System.Windows.Media.Imaging;
 using Surfly.Properties;
+using System;
+using System.Drawing;
+using System.Globalization;
+using System.Net;
+using System.Speech.Synthesis;
+using System.Web;
+using System.Windows.Forms;
 
 public class MenuHandler : IContextMenuHandler
 {
@@ -46,7 +42,7 @@ public class MenuHandler : IContextMenuHandler
             model.AddItem((CefMenuCommand)26505, "Print");
             model.AddSeparator();
             model.AddItem((CefMenuCommand)26506, "View Source Code");
-            model.AddItem((CefMenuCommand)26507, "Inspect Element"); 
+            model.AddItem((CefMenuCommand)26507, "Inspect Element");
         }
         else if (parameters.SelectionText != "")
         {
@@ -60,7 +56,7 @@ public class MenuHandler : IContextMenuHandler
             model.AddSeparator();
             model.AddItem((CefMenuCommand)26507, "Inspect Element");
         }
-        
+
     }
 
     public bool OnContextMenuCommand(IWebBrowser browserControl, IBrowser browser, IFrame frame, IContextMenuParams parameters, CefMenuCommand commandId, CefEventFlags eventFlags)
@@ -244,7 +240,7 @@ public class MenuHandler : IContextMenuHandler
 
         if (commandId == (CefMenuCommand)26523)
         {
-            
+
             return true;
         }
 

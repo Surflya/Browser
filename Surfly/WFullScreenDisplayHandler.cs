@@ -1,11 +1,10 @@
 ﻿using CefSharp;
-using CefSharp.WinForms.Handler;
+using CefSharp.Enums;
+using CefSharp.Structs;
 using CefSharp.WinForms;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using CefSharp.Structs;
-using System;
-using CefSharp.Enums;
 
 namespace Surfly
 {
@@ -26,21 +25,21 @@ namespace Surfly
         void IDisplayHandler.OnFullscreenModeChange(IWebBrowser browserControl, IBrowser browser, bool fullscreen)
         {
             var chromiumWebBrowser = (ChromiumWebBrowser)browserControl;
-                if (fullscreen)
-                {
-                    parent = chromiumWebBrowser.Parent;
-                    chromiumWebBrowser.FindForm().FormBorderStyle = FormBorderStyle.None;
-                    chromiumWebBrowser.FindForm().WindowState = FormWindowState.Maximized;
-                    chromiumWebBrowser.Parent = chromiumWebBrowser.FindForm();
-                    
-                    chromiumWebBrowser.BringToFront();
-                }
-                else
-                {
-                    chromiumWebBrowser.FindForm().FormBorderStyle = FormBorderStyle.Sizable;
-                    chromiumWebBrowser.FindForm().WindowState = FormWindowState.Normal;
-                    chromiumWebBrowser.Parent = parent;
-                }
+            if (fullscreen)
+            {
+                parent = chromiumWebBrowser.Parent;
+                chromiumWebBrowser.FindForm().FormBorderStyle = FormBorderStyle.None;
+                chromiumWebBrowser.FindForm().WindowState = FormWindowState.Maximized;
+                chromiumWebBrowser.Parent = chromiumWebBrowser.FindForm();
+
+                chromiumWebBrowser.BringToFront();
+            }
+            else
+            {
+                chromiumWebBrowser.FindForm().FormBorderStyle = FormBorderStyle.Sizable;
+                chromiumWebBrowser.FindForm().WindowState = FormWindowState.Normal;
+                chromiumWebBrowser.Parent = parent;
+            }
         }
         void IDisplayHandler.OnStatusMessage(IWebBrowser browserControl, StatusMessageEventArgs statusMessageArgs)
         {

@@ -1,31 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using CefSharp;
-using CefSharp.Core;
-using CefSharp.Preferences;
+﻿using CefSharp;
 using CefSharp.WinForms;
-using System.Globalization;
-using System.IO;
-using System.Windows.Media.Imaging;
-using Surfly.Properties;
-using System.Runtime.InteropServices;
-using System.Diagnostics;
-using System.Net;
-using System.Net.Http;
-using System.Windows.Data;
-using CefSharp.Handler;
-using CefSharp.WinForms.Handler;
 using Microsoft.Win32;
-using System.Xml;
-using System.ServiceModel.Syndication;
+using Surfly.Properties;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Net;
 using System.Reflection;
+using System.Runtime.InteropServices;
+using System.ServiceModel.Syndication;
+using System.Windows.Forms;
+using System.Xml;
 
 namespace Surfly
 {
@@ -34,12 +22,14 @@ namespace Surfly
         string sitename;
         bool isPrivateSession;
         bool isFullscreen;
+#pragma warning disable CS0649 // El campo 'Form1.previouslyMaximized' nunca se asigna y siempre tendrá el valor predeterminado false
         bool previouslyMaximized;
+#pragma warning restore CS0649 // El campo 'Form1.previouslyMaximized' nunca se asigna y siempre tendrá el valor predeterminado false
         public string profileInternalName;
         TabPage tabContextMenuStripTab;
         int tabContextMenuStripTabIndex;
         public string[] trackers_blocklist;
-        string[] feedLinks = {""};
+        string[] feedLinks = { "" };
 
         public Form1(bool callIsFromOnFullscreenModeChange)
         {
@@ -59,7 +49,7 @@ namespace Surfly
             }
             catch (Exception)
             {
-                
+
             }
 
             // Descarga la imagen de Bing del día
@@ -100,7 +90,7 @@ namespace Surfly
                 if (Settings.Default.DefaultDownloadLocation == "") Settings.Default.DefaultDownloadLocation = KnownFolders.GetPath(KnownFolder.Downloads);
 
                 // Se asegura, para evitar errores, que la llamada no es de OnFullscreenModeChange
-                if (!callIsFromOnFullscreenModeChange) 
+                if (!callIsFromOnFullscreenModeChange)
                 {
                     // Cef Settings:
 
@@ -153,7 +143,7 @@ namespace Surfly
             this.DesktopLocation = Settings.Default.LastLocation;
             this.Size = Settings.Default.LastSize;
             if (Settings.Default.LastTimeWasMaximized) this.WindowState = FormWindowState.Maximized;
-            
+
             // Carga "Al iniciar":
 
             NewTab(true);
@@ -181,7 +171,9 @@ namespace Surfly
 
             var feedReader = XmlReader.Create("http://feeds.weblogssl.com/genbeta");
             var feed = SyndicationFeed.Load(feedReader);
+#pragma warning disable CS0219 // La variable 'i1' está asignada pero su valor nunca se usa
             int i1 = 0;
+#pragma warning restore CS0219 // La variable 'i1' está asignada pero su valor nunca se usa
             foreach (var item in feed.Items)
             {
                 listViewFeed.Items.Add("<b>" + item.Authors + "</b>" + Environment.NewLine + item.Title.Text);
@@ -227,7 +219,7 @@ namespace Surfly
                 using (var key = Registry.ClassesRoot.CreateSubKey(keyName))
                 {
                     key.SetValue("", command);
-                } 
+                }
             }
             {
                 var imgKey = Registry.ClassesRoot.OpenSubKey("https");
@@ -269,9 +261,9 @@ namespace Surfly
         {
             // Carga la página indicada en la barra de direcciones
             ChromiumWebBrowser web = tabControl.SelectedTab.Controls[0] as ChromiumWebBrowser;
-            if (!toolStripAddressBar.Text.Contains(" ") && toolStripAddressBar.Text.Contains(".")) 
+            if (!toolStripAddressBar.Text.Contains(" ") && toolStripAddressBar.Text.Contains("."))
             {
-                web.LoadUrl(toolStripAddressBar.Text); 
+                web.LoadUrl(toolStripAddressBar.Text);
             }
             else if (toolStripAddressBar.Text.Contains(" ") || !toolStripAddressBar.Text.Contains("."))
             {
@@ -289,7 +281,7 @@ namespace Surfly
         private void toolStripButtonBack_Click(object sender, EventArgs e)
         {
             ChromiumWebBrowser web = tabControl.SelectedTab.Controls[0] as ChromiumWebBrowser;
-            if (web != null) 
+            if (web != null)
             {
                 if (web.CanGoBack)
                 {
@@ -312,7 +304,7 @@ namespace Surfly
 
         private void webBrowser_Validated(object sender, EventArgs e)
         {
-            
+
         }
 
         private void toolStripButtonReload_Click(object sender, EventArgs e)
@@ -370,7 +362,7 @@ namespace Surfly
                 string ntp = Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"\Resources\InternalPages\NewTab\index.html";
                 webTab.LoadUrl(ntp);
             }
-            
+
             // Hace posibles los vacíos:
             webTab.Validated += webBrowser_Validated;
             webTab.TitleChanged += webBrowser_TitleChanged;
@@ -400,12 +392,12 @@ namespace Surfly
 
         private void webBrowser_StatusMessage(object sender, StatusMessageEventArgs e)
         {
-            
+
         }
 
         private void toolStripStatusLabel_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void webBrowser_AddressChanged(object sender, AddressChangedEventArgs e)
@@ -484,7 +476,7 @@ namespace Surfly
             ChromiumWebBrowser web = tabControl.SelectedTab.Controls[0] as ChromiumWebBrowser;
             SplitContainer split = new SplitContainer();
             web.Parent = split.Panel2;
-            web.ShowDevToolsDocked(split.Panel1,null,DockStyle.Right);
+            web.ShowDevToolsDocked(split.Panel1, null, DockStyle.Right);
             split.Show();
         }
 
@@ -547,11 +539,11 @@ namespace Surfly
                 Directory.CreateDirectory(imgDir);
             {
                 imageFileName = imgDir + "bg.png";
-                    string response = null;
-                    Connect(ref response);
-                    ProcessXml(ref response);
-                    using (WebClient client = new WebClient())
-                        client.DownloadFile("http://www.bing.com" + response + "_1920x1080.jpg", imageFileName);
+                string response = null;
+                Connect(ref response);
+                ProcessXml(ref response);
+                using (WebClient client = new WebClient())
+                    client.DownloadFile("http://www.bing.com" + response + "_1920x1080.jpg", imageFileName);
             }
             //SystemParametersInfo(20, 0, imageFileName, 0x01 | 0x02);
         }
@@ -584,7 +576,7 @@ namespace Surfly
 
         private void shareToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void toolStripAddressBar_KeyPress(object sender, KeyPressEventArgs e)
@@ -607,7 +599,7 @@ namespace Surfly
                 toolStrip2.Hide();
                 web.Parent = this;
                 tabControl.Hide();
-                isFullscreen = true; 
+                isFullscreen = true;
             }
             else
             {
@@ -631,7 +623,7 @@ namespace Surfly
         {
             MakeBrowserFullscreen(true);
         }
-        
+
         public void VPNAction(string action)
         {
             if (action == "Connect")
@@ -696,6 +688,7 @@ namespace Surfly
 
         private void tabControl_DrawItem(object sender, DrawItemEventArgs e)
         {
+#pragma warning disable CS0168 // La variable 'ex' se ha declarado pero nunca se usa
             try
             {
                 var tabPage = this.tabControl.TabPages[e.Index];
@@ -709,6 +702,7 @@ namespace Surfly
                     tabRect, tabPage.ForeColor, TextFormatFlags.Left);
             }
             catch (Exception ex) { throw; }
+#pragma warning restore CS0168 // La variable 'ex' se ha declarado pero nunca se usa
         }
 
         [DllImport("user32.dll")]
@@ -799,15 +793,15 @@ namespace Surfly
 
         private void toolStripButtonNewsfeed_Click(object sender, EventArgs e)
         {
-            if (!panelContentFeed.Visible) 
-            { 
+            if (!panelContentFeed.Visible)
+            {
                 panelContentFeed.Show();
             }
             else
             {
                 panelContentFeed.Hide();
             }
-            
+
         }
 
         private void closeSuggestion_Click(object sender, EventArgs e)

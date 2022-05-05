@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Surfly.Properties;
+using System;
 using System.Windows.Forms;
-using Surfly.Properties;
 
 namespace Surfly
 {
@@ -40,7 +33,7 @@ namespace Surfly
 
         public void ResetBrowser(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

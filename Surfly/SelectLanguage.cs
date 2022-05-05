@@ -3,16 +3,10 @@
 // In this case it will change "undef" to "define" in the following statement.
 #undef USE_PROJECT_MLRUNTIME
 
-using MultiLang;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.IO.IsolatedStorage;
-using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
@@ -52,7 +46,7 @@ namespace MultiLang
         private CultureInfo SelectedCulture;
 
         // The array of supported cultures is updated automatically by Multi-Language for Visual Studio
-        private static string[] SupportedCultures = { "en", "es" } ; //MLHIDE
+        private static string[] SupportedCultures = { "en", "es" }; //MLHIDE
 
         //----------------------------------------------
         //Public Methods

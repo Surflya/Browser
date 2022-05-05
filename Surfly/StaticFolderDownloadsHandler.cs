@@ -1,7 +1,7 @@
 ﻿using CefSharp;
+using Surfly.Properties;
 using System;
 using System.IO;
-using Surfly.Properties;
 
 namespace Surfly
 {

@@ -34,7 +34,7 @@ namespace Surfly_Browser_Android
 
         public override bool OnKeyDown([GeneratedEnum] Keycode keyCode, KeyEvent e)
         {
-            if(e.KeyCode == Keycode.Back)
+            if (e.KeyCode == Keycode.Back)
             {
                 mwebView.GoBack();
             }
@@ -43,7 +43,9 @@ namespace Surfly_Browser_Android
 
         private void MTxtURL_Click(object sender, System.EventArgs e)
         {
+#pragma warning disable CS0618 // 'WebViewClient.ShouldOverrideUrlLoading(WebView?, string?)' está obsoleto: 'deprecated'
             mWebViewClient.ShouldOverrideUrlLoading(mwebView, mTxtURL.Text);
+#pragma warning restore CS0618 // 'WebViewClient.ShouldOverrideUrlLoading(WebView?, string?)' está obsoleto: 'deprecated'
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
@@ -55,7 +57,9 @@ namespace Surfly_Browser_Android
 
         public class WebClient : WebViewClient
         {
+#pragma warning disable CS0672 // El miembro 'MainActivity.WebClient.ShouldOverrideUrlLoading(WebView, string)' invalida el miembro obsoleto 'WebViewClient.ShouldOverrideUrlLoading(WebView?, string?)'. Agregue el atributo Obsolete a 'MainActivity.WebClient.ShouldOverrideUrlLoading(WebView, string)'.
             public override bool ShouldOverrideUrlLoading(WebView view, string url)
+#pragma warning restore CS0672 // El miembro 'MainActivity.WebClient.ShouldOverrideUrlLoading(WebView, string)' invalida el miembro obsoleto 'WebViewClient.ShouldOverrideUrlLoading(WebView?, string?)'. Agregue el atributo Obsolete a 'MainActivity.WebClient.ShouldOverrideUrlLoading(WebView, string)'.
             {
                 view.LoadUrl(url);
                 return true;

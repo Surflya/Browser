@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CefSharp;
-using CefSharp.Core;
-using CefSharp.Preferences;
-using CefSharp.WinForms;
+﻿using CefSharp;
 using Surfly.Properties;
-using System.IO;
+using System;
+using System.Linq;
 
 namespace Surfly
 {
@@ -29,12 +22,12 @@ namespace Surfly
             }
             catch (Exception)
             {
-                
+
             }
             return base.OnBeforeBrowse(chromiumWebBrowser, browser, frame, request, userGesture, isRedirect);
         }
 
-        void CountBlock() 
+        void CountBlock()
         {
             // Informa del bloqueo
             Console.WriteLine("Tracker Blocked");
