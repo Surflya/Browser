@@ -458,6 +458,7 @@
     <None Include="Resources\Actions\web_asset_black_24dp.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AppVersion.txt" />
     <Content Include="Core14.profile.xml" />
     <Content Include="icon.ico" />
     <Content Include="Resources\Actions\print_black_24dp.png" />

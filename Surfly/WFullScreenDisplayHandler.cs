@@ -27,18 +27,13 @@ namespace Surfly
             var chromiumWebBrowser = (ChromiumWebBrowser)browserControl;
             if (fullscreen)
             {
-                parent = chromiumWebBrowser.Parent;
-                chromiumWebBrowser.FindForm().FormBorderStyle = FormBorderStyle.None;
-                chromiumWebBrowser.FindForm().WindowState = FormWindowState.Maximized;
-                chromiumWebBrowser.Parent = chromiumWebBrowser.FindForm();
-
-                chromiumWebBrowser.BringToFront();
+                Form1 form = chromiumWebBrowser.FindForm() as Form1;
+                form.MakeBrowserFullscreen(false);
             }
             else
             {
-                chromiumWebBrowser.FindForm().FormBorderStyle = FormBorderStyle.Sizable;
-                chromiumWebBrowser.FindForm().WindowState = FormWindowState.Normal;
-                chromiumWebBrowser.Parent = parent;
+                Form1 form = chromiumWebBrowser.FindForm() as Form1;
+                form.MakeBrowserFullscreen(false);
             }
         }
         void IDisplayHandler.OnStatusMessage(IWebBrowser browserControl, StatusMessageEventArgs statusMessageArgs)

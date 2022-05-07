@@ -599,6 +599,7 @@ namespace Surfly
                 toolStrip2.Hide();
                 web.Parent = this;
                 tabControl.Hide();
+                web.BringToFront();
                 isFullscreen = true;
             }
             else
@@ -613,8 +614,8 @@ namespace Surfly
                 else WindowState = FormWindowState.Normal;
                 toolStrip1.Show();
                 toolStrip2.Show();
-                web.Parent = tabControl.SelectedTab;
                 tabControl.Show();
+                web.Parent = tabControl.SelectedTab;
                 isFullscreen = false;
             }
         }

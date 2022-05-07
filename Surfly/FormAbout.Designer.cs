@@ -44,6 +44,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormAbout";
+            this.Load += new System.EventHandler(this.FormAbout_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
