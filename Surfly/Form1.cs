@@ -808,5 +808,16 @@ namespace Surfly
         {
             panelSuggestion.Hide();
         }
+
+        private void historyToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormHistory formHistory = new FormHistory(profileInternalName);
+            formHistory.Show();
+        }
+
+        private void downloadsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
