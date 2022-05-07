@@ -124,17 +124,119 @@
   <data name="toolStrip1.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="toolStripDropDownButton1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="toolStripButtonBack.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="toolStripButtonBack.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="toolStripButtonBack.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolStripButtonBack.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 40</value>
+  </data>
+  <data name="toolStripButtonBack.Text" xml:space="preserve">
+    <value>toolStripButton1</value>
+  </data>
+  <data name="toolStripButtonBack.ToolTipText" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="toolStripButtonForward.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolStripButtonForward.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="toolStripButtonForward.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolStripButtonForward.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 40</value>
+  </data>
+  <data name="toolStripButtonForward.Text" xml:space="preserve">
+    <value>Forward</value>
+  </data>
+  <data name="toolStripButtonForward.ToolTipText" xml:space="preserve">
+    <value>Forward</value>
+  </data>
+  <data name="toolStripButtonReload.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolStripButtonReload.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="toolStripButtonReload.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolStripButtonReload.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 40</value>
+  </data>
+  <data name="toolStripButtonReload.Text" xml:space="preserve">
+    <value>toolStripButton3</value>
+  </data>
+  <data name="toolStripButtonReload.ToolTipText" xml:space="preserve">
+    <value>Reload</value>
+  </data>
+  <data name="toolStripSeparator7.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolStripSeparator7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 35</value>
+  </data>
+  <data name="toolStripButtonPrivacy.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolStripButtonPrivacy.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="toolStripButtonPrivacy.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolStripButtonPrivacy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 40</value>
+  </data>
+  <data name="toolStripButtonPrivacy.Text" xml:space="preserve">
+    <value>toolStripButton1</value>
+  </data>
+  <data name="toolStripAddressBar.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolStripAddressBar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10.2pt</value>
+  </data>
+  <data name="toolStripAddressBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>799, 40</value>
+  </data>
+  <data name="toolStripButtonGo.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolStripButtonGo.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="toolStripButtonGo.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolStripButtonGo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 40</value>
+  </data>
+  <data name="toolStripButtonGo.Text" xml:space="preserve">
+    <value>Go</value>
+  </data>
+  <data name="toolStripButtonGo.ToolTipText" xml:space="preserve">
+    <value>Go</value>
+  </data>
+  <data name="toolStripDropDownButton1.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="newTabToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="newTabToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+T</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="newTabToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>342, 30</value>
   </data>
@@ -176,6 +278,12 @@
   </data>
   <data name="pinsToolStripMenuItem.Text" xml:space="preserve">
     <value>Pins</value>
+  </data>
+  <data name="historyToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 26</value>
+  </data>
+  <data name="historyToolStripMenuItem1.Text" xml:space="preserve">
+    <value>History</value>
   </data>
   <data name="historyToolStripMenuItem.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
     <value>None</value>
@@ -339,108 +447,6 @@
   <data name="toolStripDropDownButton1.ToolTipText" xml:space="preserve">
     <value>Menu</value>
   </data>
-  <data name="toolStripButtonBack.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="toolStripButtonBack.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="toolStripButtonBack.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="toolStripButtonBack.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 40</value>
-  </data>
-  <data name="toolStripButtonBack.Text" xml:space="preserve">
-    <value>toolStripButton1</value>
-  </data>
-  <data name="toolStripButtonBack.ToolTipText" xml:space="preserve">
-    <value>Back</value>
-  </data>
-  <data name="toolStripButtonForward.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="toolStripButtonForward.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="toolStripButtonForward.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="toolStripButtonForward.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 40</value>
-  </data>
-  <data name="toolStripButtonForward.Text" xml:space="preserve">
-    <value>Forward</value>
-  </data>
-  <data name="toolStripButtonForward.ToolTipText" xml:space="preserve">
-    <value>Forward</value>
-  </data>
-  <data name="toolStripButtonReload.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="toolStripButtonReload.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="toolStripButtonReload.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="toolStripButtonReload.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 40</value>
-  </data>
-  <data name="toolStripButtonReload.Text" xml:space="preserve">
-    <value>toolStripButton3</value>
-  </data>
-  <data name="toolStripButtonReload.ToolTipText" xml:space="preserve">
-    <value>Reload</value>
-  </data>
-  <data name="toolStripSeparator7.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="toolStripSeparator7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 35</value>
-  </data>
-  <data name="toolStripButtonPrivacy.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="toolStripButtonPrivacy.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="toolStripButtonPrivacy.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="toolStripButtonPrivacy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 40</value>
-  </data>
-  <data name="toolStripButtonPrivacy.Text" xml:space="preserve">
-    <value>toolStripButton1</value>
-  </data>
-  <data name="toolStripAddressBar.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="toolStripAddressBar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10.2pt</value>
-  </data>
-  <data name="toolStripAddressBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>799, 40</value>
-  </data>
-  <data name="toolStripButtonGo.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="toolStripButtonGo.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="toolStripButtonGo.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="toolStripButtonGo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 40</value>
-  </data>
-  <data name="toolStripButtonGo.Text" xml:space="preserve">
-    <value>Go</value>
-  </data>
-  <data name="toolStripButtonGo.ToolTipText" xml:space="preserve">
-    <value>Go</value>
-  </data>
   <data name="toolStripButtonNewTab.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -517,7 +523,7 @@
     <value>Segoe UI, 10.2pt</value>
   </data>
   <data name="tabControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 139</value>
+    <value>0, 143</value>
   </data>
   <data name="tabControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -526,7 +532,7 @@
     <value>0, 0</value>
   </data>
   <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>864, 714</value>
+    <value>864, 710</value>
   </data>
   <data name="tabControl.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -541,7 +547,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tabControl.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>269, 17</value>
@@ -847,7 +853,7 @@
     <value>3</value>
   </data>
   <data name="closeSuggestion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 7</value>
+    <value>7, 15</value>
   </data>
   <data name="closeSuggestion.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -871,10 +877,10 @@
     <value>NoControl</value>
   </data>
   <data name="buttonSuggestion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>37, 24</value>
+    <value>40, 26</value>
   </data>
   <data name="buttonSuggestion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 23</value>
+    <value>200, 25</value>
   </data>
   <data name="buttonSuggestion.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -928,7 +934,7 @@
     <value>0, 89</value>
   </data>
   <data name="panelSuggestion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>864, 50</value>
+    <value>864, 54</value>
   </data>
   <data name="panelSuggestion.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -946,7 +952,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panelSuggestion.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1434,6 +1440,36 @@
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>Manual</value>
   </data>
+  <data name="&gt;&gt;toolStripButtonBack.Name" xml:space="preserve">
+    <value>toolStripButtonBack</value>
+  </data>
+  <data name="&gt;&gt;toolStripButtonBack.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripButtonForward.Name" xml:space="preserve">
+    <value>toolStripButtonForward</value>
+  </data>
+  <data name="&gt;&gt;toolStripButtonForward.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripButtonReload.Name" xml:space="preserve">
+    <value>toolStripButtonReload</value>
+  </data>
+  <data name="&gt;&gt;toolStripButtonReload.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator7.Name" xml:space="preserve">
+    <value>toolStripSeparator7</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripButtonPrivacy.Name" xml:space="preserve">
+    <value>toolStripButtonPrivacy</value>
+  </data>
+  <data name="&gt;&gt;toolStripButtonPrivacy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;toolStripDropDownButton1.Name" xml:space="preserve">
     <value>toolStripDropDownButton1</value>
   </data>
@@ -1474,6 +1510,12 @@
     <value>historyToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;historyToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;historyToolStripMenuItem1.Name" xml:space="preserve">
+    <value>historyToolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;historyToolStripMenuItem1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;downloadsToolStripMenuItem.Name" xml:space="preserve">
@@ -1595,36 +1637,6 @@
   </data>
   <data name="&gt;&gt;closeToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripButtonBack.Name" xml:space="preserve">
-    <value>toolStripButtonBack</value>
-  </data>
-  <data name="&gt;&gt;toolStripButtonBack.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripButtonForward.Name" xml:space="preserve">
-    <value>toolStripButtonForward</value>
-  </data>
-  <data name="&gt;&gt;toolStripButtonForward.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripButtonReload.Name" xml:space="preserve">
-    <value>toolStripButtonReload</value>
-  </data>
-  <data name="&gt;&gt;toolStripButtonReload.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator7.Name" xml:space="preserve">
-    <value>toolStripSeparator7</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripButtonPrivacy.Name" xml:space="preserve">
-    <value>toolStripButtonPrivacy</value>
-  </data>
-  <data name="&gt;&gt;toolStripButtonPrivacy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripAddressBar.Name" xml:space="preserve">
     <value>toolStripAddressBar</value>

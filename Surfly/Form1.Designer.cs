@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButtonBack = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonForward = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonReload = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButtonPrivacy = new System.Windows.Forms.ToolStripButton();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.newTabToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,6 +43,7 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.pinsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.historyToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.downloadsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.zoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,11 +64,6 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.selectProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripButtonBack = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonForward = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonReload = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButtonPrivacy = new System.Windows.Forms.ToolStripButton();
             this.toolStripAddressBar = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButtonGo = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonNewTab = new System.Windows.Forms.ToolStripButton();
@@ -105,7 +106,6 @@
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton1,
             this.toolStripButtonBack,
             this.toolStripButtonForward,
             this.toolStripButtonReload,
@@ -113,10 +113,50 @@
             this.toolStripButtonPrivacy,
             this.toolStripAddressBar,
             this.toolStripButtonGo,
+            this.toolStripDropDownButton1,
             this.toolStripButtonNewTab,
             this.toolStripButtonNewsfeed,
             this.toolStripButtonAddToPins});
             this.toolStrip1.Name = "toolStrip1";
+            // 
+            // toolStripButtonBack
+            // 
+            resources.ApplyResources(this.toolStripButtonBack, "toolStripButtonBack");
+            this.toolStripButtonBack.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonBack.Image = global::Surfly.Properties.Resources.arrow_back_black_24dp;
+            this.toolStripButtonBack.Name = "toolStripButtonBack";
+            this.toolStripButtonBack.Click += new System.EventHandler(this.toolStripButtonBack_Click);
+            this.toolStripButtonBack.Paint += new System.Windows.Forms.PaintEventHandler(this.PaintControlRounded);
+            // 
+            // toolStripButtonForward
+            // 
+            resources.ApplyResources(this.toolStripButtonForward, "toolStripButtonForward");
+            this.toolStripButtonForward.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonForward.Image = global::Surfly.Properties.Resources.arrow_forward_black_24dp;
+            this.toolStripButtonForward.Name = "toolStripButtonForward";
+            this.toolStripButtonForward.Click += new System.EventHandler(this.toolStripButtonForward_Click);
+            this.toolStripButtonForward.Paint += new System.Windows.Forms.PaintEventHandler(this.PaintControlRounded);
+            // 
+            // toolStripButtonReload
+            // 
+            resources.ApplyResources(this.toolStripButtonReload, "toolStripButtonReload");
+            this.toolStripButtonReload.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonReload.Image = global::Surfly.Properties.Resources.refresh_black_24dp;
+            this.toolStripButtonReload.Name = "toolStripButtonReload";
+            this.toolStripButtonReload.Click += new System.EventHandler(this.toolStripButtonReload_Click);
+            // 
+            // toolStripSeparator7
+            // 
+            resources.ApplyResources(this.toolStripSeparator7, "toolStripSeparator7");
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            // 
+            // toolStripButtonPrivacy
+            // 
+            resources.ApplyResources(this.toolStripButtonPrivacy, "toolStripButtonPrivacy");
+            this.toolStripButtonPrivacy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonPrivacy.Image = global::Surfly.Properties.Resources.lock_black_24dp;
+            this.toolStripButtonPrivacy.Name = "toolStripButtonPrivacy";
+            this.toolStripButtonPrivacy.Click += new System.EventHandler(this.toolStripButtonPrivacy_Click);
             // 
             // toolStripDropDownButton1
             // 
@@ -182,15 +222,24 @@
             // 
             // historyToolStripMenuItem
             // 
+            this.historyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.historyToolStripMenuItem1});
             this.historyToolStripMenuItem.Image = global::Surfly.Properties.Resources.history_black_24dp;
             resources.ApplyResources(this.historyToolStripMenuItem, "historyToolStripMenuItem");
             this.historyToolStripMenuItem.Name = "historyToolStripMenuItem";
+            // 
+            // historyToolStripMenuItem1
+            // 
+            this.historyToolStripMenuItem1.Name = "historyToolStripMenuItem1";
+            resources.ApplyResources(this.historyToolStripMenuItem1, "historyToolStripMenuItem1");
+            this.historyToolStripMenuItem1.Click += new System.EventHandler(this.historyToolStripMenuItem1_Click);
             // 
             // downloadsToolStripMenuItem
             // 
             this.downloadsToolStripMenuItem.Image = global::Surfly.Properties.Resources.file_download_black_24dp;
             resources.ApplyResources(this.downloadsToolStripMenuItem, "downloadsToolStripMenuItem");
             this.downloadsToolStripMenuItem.Name = "downloadsToolStripMenuItem";
+            this.downloadsToolStripMenuItem.Click += new System.EventHandler(this.downloadsToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -306,45 +355,6 @@
             this.closeToolStripMenuItem.Image = global::Surfly.Properties.Resources.close_black_24dp;
             resources.ApplyResources(this.closeToolStripMenuItem, "closeToolStripMenuItem");
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            // 
-            // toolStripButtonBack
-            // 
-            resources.ApplyResources(this.toolStripButtonBack, "toolStripButtonBack");
-            this.toolStripButtonBack.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonBack.Image = global::Surfly.Properties.Resources.arrow_back_black_24dp;
-            this.toolStripButtonBack.Name = "toolStripButtonBack";
-            this.toolStripButtonBack.Click += new System.EventHandler(this.toolStripButtonBack_Click);
-            this.toolStripButtonBack.Paint += new System.Windows.Forms.PaintEventHandler(this.PaintControlRounded);
-            // 
-            // toolStripButtonForward
-            // 
-            resources.ApplyResources(this.toolStripButtonForward, "toolStripButtonForward");
-            this.toolStripButtonForward.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonForward.Image = global::Surfly.Properties.Resources.arrow_forward_black_24dp;
-            this.toolStripButtonForward.Name = "toolStripButtonForward";
-            this.toolStripButtonForward.Click += new System.EventHandler(this.toolStripButtonForward_Click);
-            this.toolStripButtonForward.Paint += new System.Windows.Forms.PaintEventHandler(this.PaintControlRounded);
-            // 
-            // toolStripButtonReload
-            // 
-            resources.ApplyResources(this.toolStripButtonReload, "toolStripButtonReload");
-            this.toolStripButtonReload.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonReload.Image = global::Surfly.Properties.Resources.refresh_black_24dp;
-            this.toolStripButtonReload.Name = "toolStripButtonReload";
-            this.toolStripButtonReload.Click += new System.EventHandler(this.toolStripButtonReload_Click);
-            // 
-            // toolStripSeparator7
-            // 
-            resources.ApplyResources(this.toolStripSeparator7, "toolStripSeparator7");
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            // 
-            // toolStripButtonPrivacy
-            // 
-            resources.ApplyResources(this.toolStripButtonPrivacy, "toolStripButtonPrivacy");
-            this.toolStripButtonPrivacy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonPrivacy.Image = global::Surfly.Properties.Resources.lock_black_24dp;
-            this.toolStripButtonPrivacy.Name = "toolStripButtonPrivacy";
-            this.toolStripButtonPrivacy.Click += new System.EventHandler(this.toolStripButtonPrivacy_Click);
             // 
             // toolStripAddressBar
             // 
@@ -644,6 +654,7 @@
         private System.Windows.Forms.Panel panelSuggestion;
         private System.Windows.Forms.Button buttonSuggestion;
         private System.Windows.Forms.Label labelSuggestion;
+        private System.Windows.Forms.ToolStripMenuItem historyToolStripMenuItem1;
     }
 }
 

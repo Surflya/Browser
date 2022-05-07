@@ -788,7 +788,6 @@ namespace Surfly
         private void PaintControlRounded(object sender, PaintEventArgs e)
         {
             PaintTransparentBackground(this, e);
-            // TODO: Paint your actual content here with rounded corners
         }
 
         private void toolStripButtonNewsfeed_Click(object sender, EventArgs e)
@@ -807,6 +806,17 @@ namespace Surfly
         private void closeSuggestion_Click(object sender, EventArgs e)
         {
             panelSuggestion.Hide();
+        }
+
+        private void historyToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormHistory formHistory = new FormHistory(profileInternalName);
+            formHistory.Show();
+        }
+
+        private void downloadsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
