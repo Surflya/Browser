@@ -22,9 +22,7 @@ namespace Surfly
         string sitename;
         bool isPrivateSession;
         bool isFullscreen;
-#pragma warning disable CS0649 // El campo 'Form1.previouslyMaximized' nunca se asigna y siempre tendrá el valor predeterminado false
         bool previouslyMaximized;
-#pragma warning restore CS0649 // El campo 'Form1.previouslyMaximized' nunca se asigna y siempre tendrá el valor predeterminado false
         public string profileInternalName;
         TabPage tabContextMenuStripTab;
         int tabContextMenuStripTabIndex;
@@ -54,7 +52,7 @@ namespace Surfly
 
             // Descarga la imagen de Bing del día
 
-            DownloadBingImage();
+            //DownloadBingImage();
 
             // Detecta si es una sesión privada
             if (args.Contains("private-session"))
@@ -613,7 +611,6 @@ namespace Surfly
                 }
                 else WindowState = FormWindowState.Normal;
                 toolStrip1.Show();
-                toolStrip2.Show();
                 tabControl.Show();
                 web.Parent = tabControl.SelectedTab;
                 isFullscreen = false;
