@@ -28,6 +28,8 @@ namespace Surfly
         int tabContextMenuStripTabIndex;
         public string[] trackers_blocklist;
         string[] feedLinks = { "" };
+        public string latestAppVersion;
+        public bool isLatestAppVersion;
 
         public Form1(bool callIsFromOnFullscreenModeChange)
         {
@@ -53,6 +55,8 @@ namespace Surfly
             // Descarga la imagen de Bing del día
 
             //DownloadBingImage();
+
+            
 
             // Detecta si es una sesión privada
             if (args.Contains("private-session"))
@@ -83,6 +87,8 @@ namespace Surfly
                 Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Surfly Browser\" + profileInternalName + @"\usr_data\pins");
                 Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Surfly Browser\" + profileInternalName + @"\usr_data\his");
                 Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Surfly Browser\" + profileInternalName + @"\usr_data\chromium_locales");
+                Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Surfly Browser\tmp");
+                Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Surfly Browser\tmp\tmp_downloads");
                 if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Surfly Browser\" + profileInternalName + @"\usr_data\pins\pins.csv")) File.Create(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Surfly Browser\Default\usr_data\pins\pins.csv");
                 if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Surfly Browser\" + profileInternalName + @"\usr_data\his\his.csv")) File.Create(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Surfly Browser\Default\usr_data\his\his.csv");
                 if (Settings.Default.DefaultDownloadLocation == "") Settings.Default.DefaultDownloadLocation = KnownFolders.GetPath(KnownFolder.Downloads);
@@ -126,6 +132,14 @@ namespace Surfly
                 Cef.Initialize(settings);
             }
 
+            // Obtiene la última versión:
+
+            WebClient webClient = new WebClient();
+            try { webClient.DownloadFile("https://surflya.github.io/browser-latest-version.txt", Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Surfly Browser\tmp\latest-version.txt"); } catch (Exception ex) { }
+            StreamReader reader = new StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Surfly Browser\tmp\latest-version.txt");
+            latestAppVersion = reader.ReadLine();
+
+
             // Hacer que el código funcione en algunas partes imposibles:
 
             CheckForIllegalCrossThreadCalls = false;
@@ -135,8 +149,7 @@ namespace Surfly
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Registra el inicio de la sesión
-            Settings.Default.LastStart = DateTime.Now;
+
 
             this.DesktopLocation = Settings.Default.LastLocation;
             this.Size = Settings.Default.LastSize;
@@ -195,6 +208,32 @@ namespace Surfly
             // Registra el inicio de la sesión
             Settings.Default.LastStart = DateTime.Now;
             Settings.Default.Save();
+
+            // Comprueba si es la última versión y en cuyo caso actualiza:
+
+            StreamReader streamReader = new StreamReader(Environment.CurrentDirectory.Replace(@"\bin\Debug", "") + @"\AppVersion.txt");
+            if (!streamReader.ReadLine().Contains(latestAppVersion))
+            {
+                isLatestAppVersion = false;
+                DialogResult dialogResult = MessageBox.Show("There is a new version available. Do you want to update?", "Update Available", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    WebClient webClient = new WebClient();
+                    webClient.DownloadFile("https://github.com/Surflya/Browser/releases/download/" + latestAppVersion + "/setup.exe", Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Surfly Browser\tmp\tmp_downloads\browser_setup.exe");
+                    webClient.DownloadFileCompleted += NewVersion_WebClient_DownloadFileCompleted;
+                    DialogResult dialogResult2 = MessageBox.Show("Updating...", "Update", MessageBoxButtons.OKCancel);
+                    if (dialogResult2 == DialogResult.Cancel)
+                    {
+                        webClient.CancelAsync();
+                        MessageBox.Show("Update cancelled.");
+                    }
+                }
+            }
+        }
+
+        private void NewVersion_WebClient_DownloadFileCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
+        {
+            Process.Start(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Surfly Browser\tmp\tmp_downloads\browser_setup.exe");
         }
 
         private void ChangeSearchEngineToDDG(object sender, EventArgs e)
